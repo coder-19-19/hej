@@ -179,16 +179,18 @@ const Products = () => {
                                 ))}
                                 </tbody>
                             </table>
-                            <CustomPagination
-                                justifyContent="end"
-                                className="pagination-bar"
-                                currentPage={page}
-                                totalCount={total}
-                                pageSize={10}
-                                onPageChange={(page) => {
-                                    setPage(page);
-                                }}
-                            />
+                            <div className="d-flex justify-content-center">
+                                <CustomPagination
+                                    justifyContent="end"
+                                    className="pagination-bar"
+                                    currentPage={page}
+                                    totalCount={total}
+                                    pageSize={10}
+                                    onPageChange={(page) => {
+                                        setPage(page);
+                                    }}
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -161,6 +161,7 @@ const Order = () => {
                                     <table className="table mt-3">
                                         <thead>
                                         <tr style={{color:'#ff675d',textAlign:'left'}}>
+                                            <th>Şəkil</th>
                                             <th>Ad</th>
                                             <th>Say</th>
                                             <th>Endirim</th>
@@ -169,18 +170,21 @@ const Order = () => {
                                         </thead>
                                         <tbody>
                                         {modal?.item?.orderItems?.map(item => (
-                                            <tr  key={item?.id} style={{margin:'6px 0',cursor:'pointer'}} onClick={() => window.open(process.env.REACT_APP_SITE_URL + `product/${item?.product?.id}`)}>
-                                                <td>
-                                                    {item?.product?.name}
+                                            <tr key={item?.id} style={{margin:'6px 0',cursor:'pointer'}} onClick={() => window.open(process.env.REACT_APP_SITE_URL + `product/${item?.product?.id}`)}>
+                                                <td style={{verticalAlign:'middle'}}>
+                                                    <img height={70} width={50} style={{objectFit:'cover'}} src={process.env.REACT_APP_MEDIA_URL + item?.product?.productImages[0]?.path} alt=""/>
                                                 </td>
-                                                <td>
-                                                    <span>{item?.count}</span>
+                                                <td style={{verticalAlign:'middle'}}>
+                                                {item?.product?.name}
                                                 </td>
-                                                <td>
-                                                    <span>{item?.price} AZN</span>
+                                                <td style={{verticalAlign:'middle'}}>
+                                                <span>{item?.count}</span>
                                                 </td>
-                                                <td>
-                                                    <span>{item?.lastPrice} AZN</span>
+                                                <td style={{verticalAlign:'middle'}}>
+                                                <span>{item?.price} AZN</span>
+                                                </td>
+                                                <td style={{verticalAlign:'middle'}}>
+                                                <span>{item?.lastPrice} AZN</span>
                                                 </td>
                                             </tr>
                                         ))}
