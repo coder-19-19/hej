@@ -170,12 +170,12 @@ const Order = () => {
                                         </thead>
                                         <tbody>
                                         {modal?.item?.orderItems?.map(item => (
-                                            <tr key={item?.id} style={{margin:'6px 0',cursor:'pointer'}} onClick={() => window.open(process.env.REACT_APP_SITE_URL + `product/${item?.product?.id}`)}>
+                                            <tr key={item?.id} style={{margin:'6px 0',cursor:'pointer'}} onClick={() => window.open(process.env.REACT_APP_SITE_URL + `product/${item?.productDetail?.product?.id}?productDetailId=${item?.productDetail?.id}`)}>
                                                 <td style={{verticalAlign:'middle'}}>
-                                                    <img height={70} width={50} style={{objectFit:'cover'}} src={process.env.REACT_APP_MEDIA_URL + item?.product?.productImages[0]?.path} alt=""/>
+                                                    <img height={70} width={50} style={{objectFit:'cover'}} src={process.env.REACT_APP_MEDIA_URL + item?.productDetail?.product?.productImages[0]?.path} alt=""/>
                                                 </td>
                                                 <td style={{verticalAlign:'middle'}}>
-                                                {item?.product?.name}
+                                                {item?.productDetail?.product?.name}
                                                 </td>
                                                 <td style={{verticalAlign:'middle'}}>
                                                 <span>{item?.count}</span>

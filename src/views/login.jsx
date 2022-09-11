@@ -18,8 +18,8 @@ const Login = () => {
                 position:'bottom-left'
             })
             localStorage.removeItem('token')
-            localStorage.setItem('token',data?.token)
-            navigate('/')
+            localStorage.setItem('token',data?.data?.token)
+            window.location.href = '/'
         }catch (e) {
             toast.error(e.response.data?.message,{
                 position:'bottom-left'

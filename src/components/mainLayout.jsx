@@ -7,6 +7,7 @@ import {useEffect} from "react";
 import {AiFillSetting} from "react-icons/ai";
 import {CgOrganisation} from "react-icons/cg";
 import {GoSignOut} from "react-icons/go";
+import {GiMaterialsScience} from "react-icons/gi";
 
 const MainLayout = ({children}) => {
     const menus = [
@@ -29,6 +30,11 @@ const MainLayout = ({children}) => {
             path:'/categories',
             name:'Kateqoriyalar',
             icon:<BiCategoryAlt/>
+        },
+        {
+            path:'/material',
+            name:'Materiallar',
+            icon:<GiMaterialsScience/>
         },
         {
             path:'/products',

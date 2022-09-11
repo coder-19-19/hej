@@ -6,6 +6,7 @@ import Order from "./views/order";
 import Users from "./views/users";
 import Settings from "./views/settings";
 import Company from "./views/company";
+import Materials from "./views/materials";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
               <Route path="/users" element={<Users/>}/>
               <Route path="/categories" element={<Categories/>}/>
               <Route path="/companies" element={<Company/>}/>
+              <Route path="/material" element={<Materials/>}/>
               <Route path="/products" element={<Products/>}/>
               <Route path="/orders" element={<Order/>}/>
               <Route path="/login" element={<Login/>}/>
